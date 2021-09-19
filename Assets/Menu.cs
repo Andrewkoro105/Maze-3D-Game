@@ -56,7 +56,7 @@ public class Menu : MonoBehaviour
 
     public void menu()
     {
-        Time = Time < time.tim && Time != 0 ? Time : time.tim;
+        Time = (Time < time.tim && Time != 0) || time.tim == 0 ? Time : time.tim;
 
         T_N.text ="пройдено : " + n.ToString();
         T_rekord.text = "лучшее время : " + Time.ToString();

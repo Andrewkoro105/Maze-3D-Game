@@ -26,7 +26,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec0e3b1c77b775e47b41169d0996609e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CustRenTex: {fileID: 0}
+  RenTex: {fileID: 0}
 --- !u!64 &8421938399677538353
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec0e3b1c77b775e47b41169d0996609e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CustRenTex: {fileID: 0}
+  RenTex: {fileID: 0}
 --- !u!1 &6253128884430347692
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,12 +192,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7343050596378472436}
-  m_Material: {fileID: 13400000, guid: 097f6700085fd7c4c9b2d184c9473e4e, type: 2}
+  m_Material: {fileID: 13400000, guid: 015d47b016785ef4a95f657cec83dc5a, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 15.625158, z: 1}
+  m_Center: {x: 0, y: -7.987581, z: 0}
 --- !u!1001 &1577003655267874520
 PrefabInstance:
   m_ObjectHideFlags: 0

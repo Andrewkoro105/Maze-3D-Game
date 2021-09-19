@@ -1,18 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class raycastPaint : MonoBehaviour
 {
     public Shader WallShader;
     public GameObject But;
-    public CustomRenderTexture CRenderTexture;
+    public Camera CamTex;
+    public GameObject tex;
+
+    public static bool start = false;
 
     RaycastHit raycast;
-    public static bool start = false;
     int ButtonTouch = 0;
     Vector3 Pos;
     Vector2 PredPos;
+    Collider predCol = null;
 
     public void DrawOn()
     {
@@ -23,6 +25,12 @@ public class raycastPaint : MonoBehaviour
 
     private void Update()
     {
+        if (predCol != null)
+        {
+            predCol.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", CamTex.targetTexture);
+            predCol = null;
+        }
+
         if (start)
         {
             start = false;
@@ -54,53 +62,21 @@ public class raycastPaint : MonoBehaviour
 
             Ray ray = new Ray(Pos + ((But.transform.position - Pos) * 2), But.transform.forward);
 
-            if (Physics.Raycast(ray, out raycast, 10000, 1 << 3))
+            if (Physics.Raycast(ray, out raycast, 10000, 1000))
             {
-                But.GetComponent<Image>().color = Color.green;
-                Wall wall = raycast.collider.GetComponent<Wall>();
+                RenderTexture RenTexWall = raycast.collider.GetComponent<Wall>().RenTex;
+                RenderTexture RenTex = (RenTexWall == null) ? new RenderTexture(1000, 666, 24) : RenTexWall;
+                raycast.collider.GetComponent<Wall>().RenTex = RenTex;
 
-                if (wall.CustRenTex == null)
-                {
-                    Cell C = raycast.collider.transform.parent.GetComponent<Cell>();
-                    wall.CustRenTex = NewCustomRenderTexture();
-                    wall.CustRenTex.name = + C.cord.x + " " + C.cord.y;
-                    raycast.collider.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", wall.CustRenTex);
-                }
+                CamTex.targetTexture = RenTex;
 
-                CustomRenderTexture CRT = wall.CustRenTex;
-                Material wallMaterial = CRT.material;
-                if (wallMaterial != null)
-                {
-                    wallMaterial.SetFloat("x", raycast.textureCoord.x);
-                    wallMaterial.SetFloat("y", raycast.textureCoord.y);
+                Material Mat = tex.GetComponent<MeshRenderer>().material;
 
-                    Debug.Log(CRT);
-
-                    CRT.Update();
-
-
-                }
+                Mat.SetTexture("_Brfore", RenTex);
+                Mat.SetFloat("X", raycast.textureCoord.x);
+                Mat.SetFloat("Y", raycast.textureCoord.y);
+                predCol = raycast.collider;
             }
-            else But.GetComponent<Image>().color = Color.red;
         }
-        else But.GetComponent<Image>().color = Color.red;
-
-    }
-
-    CustomRenderTexture NewCustomRenderTexture()
-    {
-        CustomRenderTexture CustRenTex = new CustomRenderTexture(CRenderTexture.width, CRenderTexture.height);
-
-        CustRenTex.material = CRenderTexture.material;
-        CustRenTex.initializationMode = CRenderTexture.initializationMode;
-        CustRenTex.initializationMaterial = CRenderTexture.initializationMaterial;
-        CustRenTex.initializationSource = CRenderTexture.initializationSource;
-        CustRenTex.initializationColor = CRenderTexture.initializationColor;
-        CustRenTex.initializationTexture = CRenderTexture.initializationTexture;
-
-        CustRenTex.updateMode = CRenderTexture.updateMode;
-        CustRenTex.doubleBuffered = CRenderTexture.doubleBuffered;
-
-        return CustRenTex;
     }
 }

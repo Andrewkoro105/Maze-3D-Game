@@ -3,10 +3,7 @@ guid: 18d23b09516b5ab4aab35c18e69861ae
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - CustomRenderTexture: {fileID: 8600000, guid: 1cb21fb4aec70b5478c6eecfb522605b,
-      type: 2}
-  - Texture: {fileID: 2100000, guid: b7378869edbf6f249bd670762e980525, type: 2}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

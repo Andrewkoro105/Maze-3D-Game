@@ -166,12 +166,8 @@ struct Action_1_t724B39F7ADC58A3ACA419106F8E59F5FFC4DDDA6;
 struct Action_1_tD9663D9715FAA4E62035CFCF1AD4D094EE7872DC;
 // System.Action`1<System.String>
 struct Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3;
-// System.Action`2<UnityEngine.CustomRenderTexture,System.Int32>
-struct Action_2_t818B03F29CAF0857A23908DBFC3B1DA9C2CB3010;
 // System.Action`2<System.Object,System.Boolean>
 struct Action_2_tB46DEF21BEFDF9B046381C5FE787F08B0397DAB5;
-// System.Action`2<System.Object,System.Int32>
-struct Action_2_t0E8CFD7D8A4393070552ED14F07C6D3B5AD0ED57;
 // System.Action`2<System.String,System.Boolean>
 struct Action_2_t8FC3CF6A24FB4EA34536D08E810B50E7D41F53D4;
 // System.Action`3<System.Object,System.Boolean,UnityEngine.Profiling.Experimental.DebugScreenCapture>
@@ -816,7 +812,6 @@ IL2CPP_EXTERN_C const RuntimeMethod* Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC
 IL2CPP_EXTERN_C const RuntimeMethod* Action_1_Invoke_mD376C78EF986B61164751DB48BCD7D4674EF7EB6_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Action_1_Invoke_mEE2F727AFCBAAED59AC0481FB1FC18DC6D254754_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Action_2_Invoke_m1F55E53FB9F83CBD0ED5F4254B35132F967E08F4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Action_2_Invoke_m9BFC10A9FA220B6056CA9CB462AB519AE31D95B8_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Action_3_Invoke_m42EB9E7A4AD760AF9D850B73C6D4D0C003AB7CA7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AttributeHelperEngine_GetCustomAttributeOfType_TisDefaultExecutionOrder_t8495D3D4ECDFC3590621D31C3677D234D8A9BB1F_mCB9D04D036EDC5839E55948BD497E71865279E8D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* BaseInvokableCall__ctor_mB7F553CF006225E89AFD3C57820E8FF0E777C3FB_RuntimeMethod_var;
@@ -2597,8 +2592,6 @@ public:
 	Action_1_t35A8982F1F9CAB92233AC0C44F736ED38F0365C2 * ___textureLoaded_0;
 	// System.Action`1<UnityEngine.CustomRenderTexture> UnityEngine.CustomRenderTextureManager::textureUnloaded
 	Action_1_t35A8982F1F9CAB92233AC0C44F736ED38F0365C2 * ___textureUnloaded_1;
-	// System.Action`2<UnityEngine.CustomRenderTexture,System.Int32> UnityEngine.CustomRenderTextureManager::updateTriggered
-	Action_2_t818B03F29CAF0857A23908DBFC3B1DA9C2CB3010 * ___updateTriggered_2;
 
 public:
 	inline static int32_t get_offset_of_textureLoaded_0() { return static_cast<int32_t>(offsetof(CustomRenderTextureManager_t6F321AA7DF715767D74C5DFAA14C8D59F4FFC0F7_StaticFields, ___textureLoaded_0)); }
@@ -2617,15 +2610,6 @@ public:
 	{
 		___textureUnloaded_1 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___textureUnloaded_1), (void*)value);
-	}
-
-	inline static int32_t get_offset_of_updateTriggered_2() { return static_cast<int32_t>(offsetof(CustomRenderTextureManager_t6F321AA7DF715767D74C5DFAA14C8D59F4FFC0F7_StaticFields, ___updateTriggered_2)); }
-	inline Action_2_t818B03F29CAF0857A23908DBFC3B1DA9C2CB3010 * get_updateTriggered_2() const { return ___updateTriggered_2; }
-	inline Action_2_t818B03F29CAF0857A23908DBFC3B1DA9C2CB3010 ** get_address_of_updateTriggered_2() { return &___updateTriggered_2; }
-	inline void set_updateTriggered_2(Action_2_t818B03F29CAF0857A23908DBFC3B1DA9C2CB3010 * value)
-	{
-		___updateTriggered_2 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___updateTriggered_2), (void*)value);
 	}
 };
 
@@ -11777,15 +11761,6 @@ public:
 };
 
 
-// System.Action`2<UnityEngine.CustomRenderTexture,System.Int32>
-struct Action_2_t818B03F29CAF0857A23908DBFC3B1DA9C2CB3010  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-
 // System.Action`2<System.String,System.Boolean>
 struct Action_2_t8FC3CF6A24FB4EA34536D08E810B50E7D41F53D4  : public MulticastDelegate_t
 {
@@ -13539,8 +13514,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR OrderBlock_t0B106828F588BC2F0B989
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m25C7E9ECE61F6D5AF8F6FB184C0A60AED0473D2B_gshared_inline (List_1_t64155E53B00CF19E312B8F9D3C06ED7DC72722B0 * __this, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<UnityEngine.BeforeRenderHelper/OrderBlock>::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m72F7D16363E99D623143F2BC45BCE1B5AB4D359D_gshared (List_1_t64155E53B00CF19E312B8F9D3C06ED7DC72722B0 * __this, const RuntimeMethod* method);
-// System.Void System.Action`2<System.Object,System.Int32>::Invoke(!0,!1)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_2_Invoke_mEF724E5E2B78466C0EAC07A228E81E9779B4F995_gshared (Action_2_t0E8CFD7D8A4393070552ED14F07C6D3B5AD0ED57 * __this, RuntimeObject * ___arg10, int32_t ___arg21, const RuntimeMethod* method);
 // !0 System.Collections.Generic.List`1<System.Object>::get_Item(System.Int32)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject * List_1_get_Item_mF00B574E58FB078BB753B05A3B86DD0A7A266B63_gshared_inline (List_1_t3F94120C77410A62EAE48421CF166B83AB95A2F5 * __this, int32_t ___index0, const RuntimeMethod* method);
 // System.Int32 System.Collections.Generic.List`1<System.Object>::get_Count()
@@ -14024,12 +13997,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CubemapArray__ctor_m696D238938D8A70B273D
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void* IntPtr_ToPointer_m5C7CE32B14B6E30467B378052FEA25300833C61F_inline (intptr_t* __this, const RuntimeMethod* method);
 // System.Void UnityEngine.CullingGroup/StateChanged::Invoke(UnityEngine.CullingGroupEvent)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateChanged_Invoke_m6CD13C3770E1EB709C4B125F69F7E4CE6539814D (StateChanged_tAE96F0A8860BFCD704179F6C1F376A6FAE3E25E0 * __this, CullingGroupEvent_t58E1718FD0A5FC5037538BD223DCF1385014185C  ___sphere0, const RuntimeMethod* method);
-// System.Void UnityEngine.CustomRenderTextureManager::InvokeTriggerUpdate(UnityEngine.CustomRenderTexture,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CustomRenderTextureManager_InvokeTriggerUpdate_m5F71E72F99F22579781D3A841EF2CC06D72E6E5E (CustomRenderTexture_tA015D655D4A2C76949A5C979403E5594F52DBFAC * ___crt0, int32_t ___updateCount1, const RuntimeMethod* method);
-// System.Void UnityEngine.CustomRenderTexture::TriggerUpdate(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CustomRenderTexture_TriggerUpdate_mA12A5030EBF4D06200DA4E36F93173DB26EE177C (CustomRenderTexture_tA015D655D4A2C76949A5C979403E5594F52DBFAC * __this, int32_t ___count0, const RuntimeMethod* method);
-// System.Void UnityEngine.CustomRenderTexture::Update(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CustomRenderTexture_Update_mEB07CE4C5880A7A442E8631B1619239E3D8276C7 (CustomRenderTexture_tA015D655D4A2C76949A5C979403E5594F52DBFAC * __this, int32_t ___count0, const RuntimeMethod* method);
 // System.Void UnityEngine.CustomRenderTexture::get_initializationColor_Injected(UnityEngine.Color&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CustomRenderTexture_get_initializationColor_Injected_m45C38A39CA2783B3689743F24803A2D279DB1E40 (CustomRenderTexture_tA015D655D4A2C76949A5C979403E5594F52DBFAC * __this, Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659 * ___ret0, const RuntimeMethod* method);
 // System.Void UnityEngine.CustomRenderTexture::set_initializationColor_Injected(UnityEngine.Color&)
@@ -14050,11 +14017,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RenderTexture_SetSRGBReadWrite_m1C0BEC55
 inline void Action_1_Invoke_mD376C78EF986B61164751DB48BCD7D4674EF7EB6 (Action_1_t35A8982F1F9CAB92233AC0C44F736ED38F0365C2 * __this, CustomRenderTexture_tA015D655D4A2C76949A5C979403E5594F52DBFAC * ___obj0, const RuntimeMethod* method)
 {
 	((  void (*) (Action_1_t35A8982F1F9CAB92233AC0C44F736ED38F0365C2 *, CustomRenderTexture_tA015D655D4A2C76949A5C979403E5594F52DBFAC *, const RuntimeMethod*))Action_1_Invoke_m587509C88BB83721D7918D89DF07606BB752D744_gshared)(__this, ___obj0, method);
-}
-// System.Void System.Action`2<UnityEngine.CustomRenderTexture,System.Int32>::Invoke(!0,!1)
-inline void Action_2_Invoke_m9BFC10A9FA220B6056CA9CB462AB519AE31D95B8 (Action_2_t818B03F29CAF0857A23908DBFC3B1DA9C2CB3010 * __this, CustomRenderTexture_tA015D655D4A2C76949A5C979403E5594F52DBFAC * ___arg10, int32_t ___arg21, const RuntimeMethod* method)
-{
-	((  void (*) (Action_2_t818B03F29CAF0857A23908DBFC3B1DA9C2CB3010 *, CustomRenderTexture_tA015D655D4A2C76949A5C979403E5594F52DBFAC *, int32_t, const RuntimeMethod*))Action_2_Invoke_mEF724E5E2B78466C0EAC07A228E81E9779B4F995_gshared)(__this, ___arg10, ___arg21, method);
 }
 // UnityEngine.Vector4 UnityEngine.Sprite::GetInnerUVs()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector4_tA56A37FC5661BCC89C3DDC24BE12BA5BCB6A02C7  Sprite_GetInnerUVs_m394AF466930BBACE6F45425C418D0A8991600AD9 (Sprite_t5B10B1178EC2E6F53D33FFD77557F31C08A51ED9 * __this, const RuntimeMethod* method);
@@ -19227,6 +19189,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RenderTexture_t5FE7A5B47EF962A0E8D7BEBA05E9FC
 	RenderTexture_t5FE7A5B47EF962A0E8D7BEBA05E9FC87D49A1849 * icallRetVal = _il2cpp_icall_func(__this);
 	return icallRetVal;
 }
+// System.Void UnityEngine.Camera::set_targetTexture(UnityEngine.RenderTexture)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Camera_set_targetTexture_m200B05665D1F5C62D9016C2DD20955755BAB4596 (Camera_tC44E094BAB53AFC8A014C6F9CFCE11F4FC38006C * __this, RenderTexture_t5FE7A5B47EF962A0E8D7BEBA05E9FC87D49A1849 * ___value0, const RuntimeMethod* method)
+{
+	typedef void (*Camera_set_targetTexture_m200B05665D1F5C62D9016C2DD20955755BAB4596_ftn) (Camera_tC44E094BAB53AFC8A014C6F9CFCE11F4FC38006C *, RenderTexture_t5FE7A5B47EF962A0E8D7BEBA05E9FC87D49A1849 *);
+	static Camera_set_targetTexture_m200B05665D1F5C62D9016C2DD20955755BAB4596_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Camera_set_targetTexture_m200B05665D1F5C62D9016C2DD20955755BAB4596_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Camera::set_targetTexture(UnityEngine.RenderTexture)");
+	_il2cpp_icall_func(__this, ___value0);
+}
 // System.Int32 UnityEngine.Camera::get_targetDisplay()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Camera_get_targetDisplay_mED770420CB57E500C60BE15B9F7F5ED424F0BA3D (Camera_tC44E094BAB53AFC8A014C6F9CFCE11F4FC38006C * __this, const RuntimeMethod* method)
 {
@@ -21887,34 +21858,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CustomRenderTexture_Internal_CreateCusto
 	_il2cpp_icall_func = (CustomRenderTexture_Internal_CreateCustomRenderTexture_m27E6546D9664A5C3895D66D36C45E5EC83069E45_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CustomRenderTexture::Internal_CreateCustomRenderTexture(UnityEngine.CustomRenderTexture)");
 	_il2cpp_icall_func(___rt0);
 }
-// System.Void UnityEngine.CustomRenderTexture::TriggerUpdate(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CustomRenderTexture_TriggerUpdate_mA12A5030EBF4D06200DA4E36F93173DB26EE177C (CustomRenderTexture_tA015D655D4A2C76949A5C979403E5594F52DBFAC * __this, int32_t ___count0, const RuntimeMethod* method)
-{
-	typedef void (*CustomRenderTexture_TriggerUpdate_mA12A5030EBF4D06200DA4E36F93173DB26EE177C_ftn) (CustomRenderTexture_tA015D655D4A2C76949A5C979403E5594F52DBFAC *, int32_t);
-	static CustomRenderTexture_TriggerUpdate_mA12A5030EBF4D06200DA4E36F93173DB26EE177C_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (CustomRenderTexture_TriggerUpdate_mA12A5030EBF4D06200DA4E36F93173DB26EE177C_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CustomRenderTexture::TriggerUpdate(System.Int32)");
-	_il2cpp_icall_func(__this, ___count0);
-}
-// System.Void UnityEngine.CustomRenderTexture::Update(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CustomRenderTexture_Update_mEB07CE4C5880A7A442E8631B1619239E3D8276C7 (CustomRenderTexture_tA015D655D4A2C76949A5C979403E5594F52DBFAC * __this, int32_t ___count0, const RuntimeMethod* method)
-{
-	{
-		int32_t L_0 = ___count0;
-		CustomRenderTextureManager_InvokeTriggerUpdate_m5F71E72F99F22579781D3A841EF2CC06D72E6E5E(__this, L_0, /*hidden argument*/NULL);
-		int32_t L_1 = ___count0;
-		CustomRenderTexture_TriggerUpdate_mA12A5030EBF4D06200DA4E36F93173DB26EE177C(__this, L_1, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.CustomRenderTexture::Update()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CustomRenderTexture_Update_m4D9801B26C7E7E492C3FF7E9341D9C91B56D3F80 (CustomRenderTexture_tA015D655D4A2C76949A5C979403E5594F52DBFAC * __this, const RuntimeMethod* method)
-{
-	{
-		CustomRenderTexture_Update_mEB07CE4C5880A7A442E8631B1619239E3D8276C7(__this, 1, /*hidden argument*/NULL);
-		return;
-	}
-}
 // UnityEngine.Material UnityEngine.CustomRenderTexture::get_material()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_t8927C00353A72755313F046D0CE85178AE8218EE * CustomRenderTexture_get_material_m1C06CA3C34EF47780DDD1120E5D239B54AD03A31 (CustomRenderTexture_tA015D655D4A2C76949A5C979403E5594F52DBFAC * __this, const RuntimeMethod* method)
 {
@@ -22225,45 +22168,6 @@ IL_000b:
 	}
 
 IL_0012:
-	{
-		return;
-	}
-}
-// System.Void UnityEngine.CustomRenderTextureManager::InvokeTriggerUpdate(UnityEngine.CustomRenderTexture,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CustomRenderTextureManager_InvokeTriggerUpdate_m5F71E72F99F22579781D3A841EF2CC06D72E6E5E (CustomRenderTexture_tA015D655D4A2C76949A5C979403E5594F52DBFAC * ___crt0, int32_t ___updateCount1, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_2_Invoke_m9BFC10A9FA220B6056CA9CB462AB519AE31D95B8_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CustomRenderTextureManager_t6F321AA7DF715767D74C5DFAA14C8D59F4FFC0F7_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	Action_2_t818B03F29CAF0857A23908DBFC3B1DA9C2CB3010 * G_B2_0 = NULL;
-	Action_2_t818B03F29CAF0857A23908DBFC3B1DA9C2CB3010 * G_B1_0 = NULL;
-	{
-		Action_2_t818B03F29CAF0857A23908DBFC3B1DA9C2CB3010 * L_0 = ((CustomRenderTextureManager_t6F321AA7DF715767D74C5DFAA14C8D59F4FFC0F7_StaticFields*)il2cpp_codegen_static_fields_for(CustomRenderTextureManager_t6F321AA7DF715767D74C5DFAA14C8D59F4FFC0F7_il2cpp_TypeInfo_var))->get_updateTriggered_2();
-		Action_2_t818B03F29CAF0857A23908DBFC3B1DA9C2CB3010 * L_1 = L_0;
-		G_B1_0 = L_1;
-		if (L_1)
-		{
-			G_B2_0 = L_1;
-			goto IL_000b;
-		}
-	}
-	{
-		goto IL_0013;
-	}
-
-IL_000b:
-	{
-		CustomRenderTexture_tA015D655D4A2C76949A5C979403E5594F52DBFAC * L_2 = ___crt0;
-		int32_t L_3 = ___updateCount1;
-		NullCheck(G_B2_0);
-		Action_2_Invoke_m9BFC10A9FA220B6056CA9CB462AB519AE31D95B8(G_B2_0, L_2, L_3, /*hidden argument*/Action_2_Invoke_m9BFC10A9FA220B6056CA9CB462AB519AE31D95B8_RuntimeMethod_var);
-	}
-
-IL_0013:
 	{
 		return;
 	}
